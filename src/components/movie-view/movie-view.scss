@@ -1,13 +1,12 @@
 
 $bgcolor: #170229;
-$primary: #B38EE4;
+$primary: #a479db;
 $main-text: white;
 $custom-font: "Trebuchet MS", sans-serif;
 
 
 
 .movie-details {
-  background-color: $bgcolor;
   max-width: 60%;
   margin: 0 auto; /* Center horizontally */
   padding: 20px;
@@ -21,7 +20,6 @@ img {
   
   }
   
-
   .movieViewTitle {
     color: $main-text;
     font-family: $custom-font;

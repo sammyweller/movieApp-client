@@ -11,7 +11,7 @@ export const MovieView = ({ movie, onBackClick }) => {
         <div>
           <img src={movie.imagePath} />
         </div>
-        <div className="movie-details">
+        <div className="movie-details" style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}>
           <div className="movieViewTitle">
             <span>{movie.title}</span>
           </div>

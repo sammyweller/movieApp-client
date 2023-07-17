@@ -7,12 +7,12 @@ import "./movie-card.scss";
 export const MovieCard = ({ movie, onMovieClick }) => {
 
   return (
-    <Card className="h-100" style={{ border: "0px solid #071C53" }}>
+    <Card className="h-100" style={{ border: "0px solid rgba(0, 0, 0, 0)", backgroundColor: "rgba(0, 0, 0, 0.3)"}}>
       <Card.Img variant="top" src={movie.imagePath} />
-      <Card.Body className="card-body">
+      <Card.Body >
         <Card.Title class="movieTitle">{movie.title}</Card.Title>
         <Card.Text class="director">Director: {movie.director.name}</Card.Text>
-        <Button onClick={() => onMovieClick(movie)} >
+        <Button onClick={() => onMovieClick(movie)}  >
           Open
         </Button>
       </Card.Body>
