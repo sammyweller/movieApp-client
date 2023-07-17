@@ -1,5 +1,16 @@
-$color: steelblue;
+$primary: #B38EE4;
+$main-text: white;
 
-.my-flix {
-  color: $color;
+
+body {
+  background-image: url("../src/img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
+
+
+
+@import '~bootstrap/scss/bootstrap.scss';
+
+

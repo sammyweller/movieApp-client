@@ -1,0 +1,43 @@
+
+$bgcolor: #170229;
+$primary: #B38EE4;
+$main-text: white;
+$custom-font: "Trebuchet MS", sans-serif;
+
+
+
+.movie-details {
+  background-color: $bgcolor;
+  max-width: 60%;
+  margin: 0 auto; /* Center horizontally */
+  padding: 20px;
+}
+
+img {
+
+  width: 60%; /* Adjust the width to your desired size */
+  display: block;
+  margin: 0 auto; /* Center horizontally */
+  
+  }
+  
+
+  .movieViewTitle {
+    color: $main-text;
+    font-family: $custom-font;
+    font-size: 1.5em;
+  }
+
+  .movieViewDescription, .movieViewGenre, .movieViewDirector {
+    color: $main-text;
+    font-weight: 200;
+  }
+
+  .button-movie{
+    display: flex;
+    justify-content: center;
+    margin: 20px 20px;
+  }
+
+
+  @import "~bootstrap/scss/bootstrap.scss";

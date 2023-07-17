@@ -1,0 +1,23 @@
+$bgcolor: #170229;
+$primary: #B38EE4;
+$main-text: white;
+$custom-font: "Trebuchet MS", sans-serif;
+
+
+.card-body {
+ background-color: $bgcolor;
+}
+
+.movieTitle {
+    color: $main-text;
+    font-family: $custom-font;
+    font-size: 1.5em;
+}
+
+.director {
+    color: $main-text;
+    font-weight: 200;
+}
+
+
+  @import "~bootstrap/scss/bootstrap.scss";
