@@ -1,5 +1,4 @@
 import React from "react";
-//import PropTypes from 'prop-types';
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import "./movie-view.scss";
@@ -47,20 +46,3 @@ export const MovieView = ({ movies }) => {
 
 
 
-/*
-  MovieView.propTypes = {
-    movie: PropTypes.shape({
-      imagePath: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      genre: PropTypes.shape({
-        name: PropTypes.string.isRequired
-      }),
-      description: PropTypes.string.isRequired,
-      director: PropTypes.shape({
-        name: PropTypes.string.isRequired
-      }),
-    }).isRequired,
-    //onBackClick: PropTypes.func.isRequired
-  };
-
-*/
