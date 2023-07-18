@@ -38,7 +38,6 @@ export const MovieView = ({ movies }) => {
         </div>
         <Link to={`/`}>
         <button className="back-button">Back</button>
-\
       </Link>
       </div>
     );

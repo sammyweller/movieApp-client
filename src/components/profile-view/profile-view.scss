@@ -1,0 +1,10 @@
+.center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+
+  @import "~bootstrap/scss/bootstrap.scss";
