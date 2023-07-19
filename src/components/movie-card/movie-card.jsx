@@ -12,8 +12,8 @@ export const MovieCard = ({ movie }) => {
   return (
     <Card className="h-100" style={{ border: "0px solid rgba(0, 0, 0, 0)", backgroundColor: "rgba(0, 0, 0, 0.3)"}}>
       <Card.Img variant="top" src={movie.imagePath} />
-      <Card.Body >
-        <Card.Title className="movieTitle">{movie.title}</Card.Title>
+      <Card.Body className="card-body">
+        <Card.Title className="movie-title">{movie.title}</Card.Title>
         <Card.Text className="director">Director: {movie.director.name}</Card.Text>
         <Link to={`/movies/${encodeURIComponent(movie.id)}`}>
           <Button variant="link">Open</Button>

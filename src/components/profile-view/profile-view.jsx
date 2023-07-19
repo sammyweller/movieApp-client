@@ -1,14 +1,22 @@
 import { useState, useEffect } from "react";
+import { MovieCard } from "../movie-card/movie-card";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Col from "react-bootstrap/Col";
 import "./profile-view.scss"
 
-export const ProfileView = ({ user, token, onLogout }) => {
+
+
+export const ProfileView = ({ user, movies, token, onLogout }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [dateOfBirth, setDateOfBirth] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
+
+  const favoriteMovies = movies.filter((m) => user.favoriteMovies.includes(m.id));
+
+
 
 
   useEffect(() => {
@@ -18,6 +26,8 @@ export const ProfileView = ({ user, token, onLogout }) => {
       setDateOfBirth(user.dateOfBirth);
     }
   }, [user]);
+
+
 
   const handleUpdateUser = (event) => {
     event.preventDefault();
@@ -47,6 +57,7 @@ export const ProfileView = ({ user, token, onLogout }) => {
         console.log("Error updating user data:", error);
       });
   };
+
 
 
   const handleDeleteUser = () => {
@@ -115,6 +126,21 @@ export const ProfileView = ({ user, token, onLogout }) => {
       <Button variant="danger" onClick={handleDeleteUser}>
         Delete Account
       </Button>
+
+
+      <h2>{username}'s Favorite Movies:</h2>
+      
+      {favoriteMovies.length > 0 ? (
+        <div className="movie-list" style={{ display: "flex", gap: "20px" }}>
+          {favoriteMovies.map((movie) => (
+            <Col md={2} key={movie.id}>
+              <MovieCard movie={movie} />
+            </Col>
+          ))}
+        </div>
+      ) : (
+        <p>No favorite movies available.</p>
+      )}
 
 
     </div>
