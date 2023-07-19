@@ -3,12 +3,13 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "./profile-view.scss"
 
-export const ProfileView = ({ user, token }) => {
+export const ProfileView = ({ user, token, onLogout }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [dateOfBirth, setDateOfBirth] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
+
 
   useEffect(() => {
     if (user) {
@@ -46,6 +47,25 @@ export const ProfileView = ({ user, token }) => {
         console.log("Error updating user data:", error);
       });
   };
+
+
+  const handleDeleteUser = () => {
+    // Make an API request to delete the user's account
+    fetch(`https://sw-myflix-app-baa5e3f40824.herokuapp.com/users/${user.username}`, {
+      method: "DELETE",
+      headers: {
+          Authorization: `Bearer ${token}`
+      }
+  }).then((response) => {
+      if (response.ok) {
+          onLogout();
+      } else {
+          alert("something went wrong.")
+      }
+  })
+}
+
+
 
   return (
     <div className="center-container">
@@ -90,6 +110,13 @@ export const ProfileView = ({ user, token }) => {
         <Button type="submit">Update</Button>
       </Form>
       {successMessage && <p>{successMessage}</p>}
+
+
+      <Button variant="danger" onClick={handleDeleteUser}>
+        Delete Account
+      </Button>
+
+
     </div>
   );
 };
