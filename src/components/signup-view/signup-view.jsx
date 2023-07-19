@@ -38,8 +38,6 @@ export const SignupView = () => {
       });
     };
 
-
-
     return (
       <Form onSubmit={handleSubmit}>
         <h2>Sign up:</h2>

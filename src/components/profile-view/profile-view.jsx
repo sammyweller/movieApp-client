@@ -17,8 +17,6 @@ export const ProfileView = ({ user, movies, token, onLogout }) => {
   const favoriteMovies = movies.filter((m) => user.favoriteMovies.includes(m.id));
 
 
-
-
   useEffect(() => {
     if (user) {
       setUsername(user.username);
@@ -26,7 +24,6 @@ export const ProfileView = ({ user, movies, token, onLogout }) => {
       setDateOfBirth(user.dateOfBirth);
     }
   }, [user]);
-
 
 
   const handleUpdateUser = (event) => {
@@ -59,7 +56,6 @@ export const ProfileView = ({ user, movies, token, onLogout }) => {
   };
 
 
-
   const handleDeleteUser = () => {
     // Make an API request to delete the user's account
     fetch(`https://sw-myflix-app-baa5e3f40824.herokuapp.com/users/${user.username}`, {
@@ -75,8 +71,6 @@ export const ProfileView = ({ user, movies, token, onLogout }) => {
       }
   })
 }
-
-
 
   return (
     <div className="center-container">
