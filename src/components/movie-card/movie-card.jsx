@@ -13,10 +13,14 @@ export const MovieCard = ({ movie }) => {
     <Card className="h-100" style={{ border: "0px solid rgba(0, 0, 0, 0)", backgroundColor: "rgba(0, 0, 0, 0.3)"}}>
       <Card.Img variant="top" src={movie.imagePath} />
       <Card.Body className="card-body">
-        <Card.Title className="movie-title">{movie.title}</Card.Title>
+        <Card.Title 
+        className="movie-title" 
+        style={{color: "white" }}>{movie.title}</Card.Title>
         <Card.Text className="director">Director: {movie.director.name}</Card.Text>
         <Link to={`/movies/${encodeURIComponent(movie.id)}`}>
-          <Button variant="link">Open</Button>
+          <Button 
+          className="card-button" 
+          style={{color: "white",  backgroundColor: "rgba(0, 0, 0, 0)", border: "1px solid rgba(255, 255, 255, 0.2)", borderRadius: "20px" }}>Open</Button>
         </Link>
       </Card.Body>
     </Card>

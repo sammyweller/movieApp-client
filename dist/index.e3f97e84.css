@@ -1,3 +1,7 @@
+.card-body, .director, .movie-title {
+  color: #fff;
+}
+
 :root, [data-bs-theme="light"] {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -13187,13 +13191,14 @@ textarea.form-control-lg {
 }
 
 .movie-details {
-  max-width: 60%;
+  color: #fff;
+  max-width: 40%;
   margin: 0 auto;
   padding: 20px;
 }
 
 img {
-  width: 60%;
+  width: 40%;
   margin: 0 auto;
   display: block;
 }
@@ -26387,6 +26392,7 @@ textarea.form-control-lg {
 }
 
 .center-container {
+  color: #fff;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -26397,11 +26403,20 @@ textarea.form-control-lg {
 .movie-list {
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 50px;
   display: flex;
 }
 
 .movie-title, .director {
   font-size: 15px;
+}
+
+.userinfo-title {
+  margin: 50px 0 40px;
+}
+
+.favorite-movies-title {
+  margin: 60px 0 40px;
 }
 
 :root, [data-bs-theme="light"] {
@@ -39597,6 +39612,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.nav-bar {
+  color: #fff;
 }
 
 :root, [data-bs-theme="light"] {

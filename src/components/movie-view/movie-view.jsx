@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router";
+import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import "./movie-view.scss";
 
@@ -63,7 +64,7 @@ export const MovieView = ({ movies, user, token, setUser }) => {
   };
 
   return (
-    <div>
+    <div className="movie-deets">
       <div>
         <img src={movie.imagePath} alt="Image of movie" />
       </div>
@@ -85,18 +86,47 @@ export const MovieView = ({ movies, user, token, setUser }) => {
         </div>
       </div>
       <Link to={`/`}>
-        <button className="back-button">Back</button>
+        <div className="button-container">
+
+          <Button className="back-button"
+            style={{
+              color: "white",
+              backgroundColor: "rgba(0, 0, 0, 0)",
+              border: "1px solid rgba(255, 255, 255, 0.2)",
+              borderRadius: "20px"
+            }}>Back</Button>
+        </div>
       </Link>
 
       {isFavorite && user && (
-        <button className="remove-favorite-button" onClick={handleRemoveFromFavorite}>
-          Remove from Favorites
-        </button>
+        <div className="button-container">
+
+          <Button className="remove-favorite-button"
+            style={{
+              color: "white",
+              backgroundColor: "rgba(0, 0, 0, 0)",
+              border: "1px solid rgba(255, 255, 255, 0.2)",
+              borderRadius: "20px"
+            }}
+            onClick={handleRemoveFromFavorite}>
+            Remove from Favorites
+          </Button>
+        </div>
       )}
       {!isFavorite && user && (
-        <button className="add-favorite-button" onClick={handleAddToFavorite}>
-          Add to Favorites
-        </button>
+        <div className="button-container">
+
+          <Button className="add-favorite-button"
+            style={{
+              color: "white",
+              backgroundColor: "rgba(0, 0, 0, 0)",
+              border: "1px solid rgba(255, 255, 255, 0.2)",
+              borderRadius: "20px"
+            }}
+            onClick={handleAddToFavorite}>
+            Add to Favorites
+          </Button>
+        </div>
       )}
     </div>
   );

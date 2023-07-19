@@ -1,9 +1,12 @@
+$smalltext: white;
+
 .center-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  color: $smalltext;
 }
 
 
@@ -11,11 +14,20 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-
+  margin-bottom: 50px;
 }
 
 .movie-title, .director {
   font-size: 15px;
+}
+
+.userinfo-title {
+  margin: 50px 0 40px 0;
+
+}
+
+.favorite-movies-title {
+  margin: 60px 0 40px 0;
 }
 
   @import "~bootstrap/scss/bootstrap.scss";

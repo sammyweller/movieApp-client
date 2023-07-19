@@ -6,7 +6,6 @@ import Col from "react-bootstrap/Col";
 import "./profile-view.scss"
 
 
-
 export const ProfileView = ({ user, movies, token, onLogout }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -74,7 +73,7 @@ export const ProfileView = ({ user, movies, token, onLogout }) => {
 
   return (
     <div className="center-container">
-      <h2>User Information</h2>
+      <h2 className="userinfo-title">@{username}'s user info:</h2>
       <Form onSubmit={handleUpdateUser}>
         <Form.Group controlId="formUsername" style={{ width: "300px" }}>
           <Form.Label >Username</Form.Label>
@@ -112,7 +111,7 @@ export const ProfileView = ({ user, movies, token, onLogout }) => {
             required
           />
         </Form.Group>
-        <Button type="submit">Update</Button>
+        <Button type="submit" s style={{color: "white",  backgroundColor: "rgba(0, 0, 0, 0)", border: "1px solid rgba(255, 255, 255, 0.2)", borderRadius: "20px" }}>Update</Button>
       </Form>
       {successMessage && <p>{successMessage}</p>}
 
@@ -122,12 +121,12 @@ export const ProfileView = ({ user, movies, token, onLogout }) => {
       </Button>
 
 
-      <h2>{username}'s Favorite Movies:</h2>
+      <h2 className="favorite-movies-title">@{username}'s fave movies:</h2>
       
       {favoriteMovies.length > 0 ? (
         <div className="movie-list" style={{ display: "flex", gap: "20px" }}>
           {favoriteMovies.map((movie) => (
-            <Col md={2} key={movie.id}>
+            <Col md={3} key={movie.id}>
               <MovieCard movie={movie} />
             </Col>
           ))}
