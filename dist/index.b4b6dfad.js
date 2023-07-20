@@ -27324,11 +27324,10 @@ const MainView = ()=>{
                                                 type: "text",
                                                 value: searchTerm,
                                                 onChange: (e)=>setSearchTerm(e.target.value),
-                                                placeholder: "Search for a movie...",
+                                                placeholder: "Movie search...",
                                                 className: "form-control ",
                                                 style: {
                                                     color: "white",
-                                                    maxWidth: "300px",
                                                     fontFamily: "'Quicksand', sans-serif",
                                                     backgroundColor: "rgba(0, 0, 0, 0)",
                                                     border: "1px solid rgba(255, 255, 255, 0.2)",
@@ -27382,7 +27381,7 @@ const MainView = ()=>{
                             }, void 0, false)
                         }, void 0, false, {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 190,
+                            lineNumber: 189,
                             columnNumber: 11
                         }, undefined)
                     ]
@@ -47960,7 +47959,10 @@ const NavigationBar = ({ user, onLoggedOut })=>{
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Navbar).Toggle, {
-                    "aria-controls": "basic-navbar-nav"
+                    "aria-controls": "basic-navbar-nav",
+                    style: {
+                        borderColor: "white"
+                    }
                 }, void 0, false, {
                     fileName: "src/components/navigation-bar/navigation-bar.jsx",
                     lineNumber: 12,

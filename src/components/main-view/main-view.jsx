@@ -144,11 +144,10 @@ export const MainView = () => {
                       type="text"
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
-                      placeholder="Search for a movie..."
+                      placeholder="Movie search..."
                       className="form-control "
                       style={{ 
                         color: "white",
-                        maxWidth: "300px", 
                         fontFamily: "'Quicksand', sans-serif", 
                         backgroundColor: "rgba(0, 0, 0, 0)", 
                         border: "1px solid rgba(255, 255, 255, 0.2)", 

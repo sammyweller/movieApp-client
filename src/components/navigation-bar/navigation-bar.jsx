@@ -9,7 +9,7 @@ export const NavigationBar = ({ user, onLoggedOut }) => {
         <Navbar.Brand style={{ color: "white"}} as={Link} to="/">
           Movies App
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ borderColor: "white" }} />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
           {!user && (

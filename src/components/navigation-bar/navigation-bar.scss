@@ -5,8 +5,10 @@ $smallfont: 'Quicksand', sans-serif;
 .nav-bar {
     margin: 10px 0 40px 0;
     font-family: $titlefont;
+    .navbar-toggler-icon {
+        /* Change the color of the hamburger menu icon here */
+        color: white;
+      }
 }
-
-
 
 @import "~bootstrap/scss/bootstrap.scss";
