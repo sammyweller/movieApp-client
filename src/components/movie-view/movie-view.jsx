@@ -66,13 +66,13 @@ export const MovieView = ({ movies, user, token, setUser }) => {
   return (
     <div className="movie-deets">
       <div>
-        <img src={movie.imagePath} alt="Image of movie" />
+        <img src={movie.imagePath} alt="Image of movie" style={{ borderRadius: "20px" }} />
       </div>
-      <div className="movie-details" style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}>
-        <div className="movieViewTitle">
+      <div className="movie-details" style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}>
+        <div className="movieViewTitle" style={{ fontSize: "30px", marginBottom: "10px" }}>
           <span>{movie.title}</span>
         </div>
-        <div className="movieViewDescription">
+        <div className="movieViewDescription" style={{ marginBottom: "10px" }}>
           <span>Description: </span>
           <span>{movie.description}</span>
         </div>
@@ -85,18 +85,7 @@ export const MovieView = ({ movies, user, token, setUser }) => {
           <span>{movie.director.name}</span>
         </div>
       </div>
-      <Link to={`/`}>
-        <div className="button-container">
-
-          <Button className="back-button"
-            style={{
-              color: "white",
-              backgroundColor: "rgba(0, 0, 0, 0)",
-              border: "1px solid rgba(255, 255, 255, 0.2)",
-              borderRadius: "20px"
-            }}>Back</Button>
-        </div>
-      </Link>
+      <div className="movie-view-buttons">
 
       {isFavorite && user && (
         <div className="button-container">
@@ -106,10 +95,11 @@ export const MovieView = ({ movies, user, token, setUser }) => {
               color: "white",
               backgroundColor: "rgba(0, 0, 0, 0)",
               border: "1px solid rgba(255, 255, 255, 0.2)",
-              borderRadius: "20px"
+              borderRadius: "20px",
+              marginTop: "20px"
             }}
             onClick={handleRemoveFromFavorite}>
-            Remove from Favorites
+            Remove from favorites
           </Button>
         </div>
       )}
@@ -121,13 +111,34 @@ export const MovieView = ({ movies, user, token, setUser }) => {
               color: "white",
               backgroundColor: "rgba(0, 0, 0, 0)",
               border: "1px solid rgba(255, 255, 255, 0.2)",
-              borderRadius: "20px"
+              borderRadius: "20px",
+              marginTop: "20px"
             }}
             onClick={handleAddToFavorite}>
-            Add to Favorites
+            Add to favorites
           </Button>
         </div>
       )}
+      <Link to={`/`}>
+        
+        <div className="button-container">
+
+          <Button className="back-button"
+            style={{
+              color: "white",
+              backgroundColor: "rgba(0, 0, 0, 0)",
+              border: "1px solid rgba(255, 255, 255, 0.2)",
+              borderRadius: "20px",
+              margin: "10px 0 60px 0"
+            }}>Back</Button>
+        </div>
+      </Link>
+
+
+
+
+
+      </div>
     </div>
   );
 };

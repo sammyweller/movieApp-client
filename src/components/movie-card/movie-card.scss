@@ -1,10 +1,27 @@
 $smalltext: white;
-$button: pink;
+$titlefont:'Oswald', sans-serif;
+$smallfont: 'Quicksand', sans-serif;
 
 
-.card-body, .director, .movie-title {
+.director {
 color: $smalltext;
+font-family: $smallfont;
 }
+
+.movie-title {
+  font-family: $titlefont;
+}
+
+
+@media only all and (max-width: 1020px) {
+
+  .movie-card {
+    font-size: 13px;
+  }
+
+}
+
+
 
 
 

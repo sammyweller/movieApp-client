@@ -2,14 +2,13 @@
 
 body {
   background-image: url("../src/img/background.png");
+  background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  padding: 0 20px;
 }
 
-.nav-bar {
-  color: white;
-}
 
 @import '~bootstrap/scss/bootstrap.scss';
 

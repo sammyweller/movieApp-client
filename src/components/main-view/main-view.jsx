@@ -8,6 +8,8 @@ import { NavigationBar } from "../navigation-bar/navigation-bar";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import "./main-view.scss";
+
 
 export const MainView = () => {
   const storedUser = JSON.parse(localStorage.getItem("user"));
@@ -16,6 +18,8 @@ export const MainView = () => {
   const [token, setToken] = useState(storedToken ? storedToken : null);
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState("");
+
 
   const onLogout = () => {
     setUser(null);
@@ -69,7 +73,9 @@ export const MainView = () => {
 
   return (
     <BrowserRouter>
-      <NavigationBar className="nav-bar" user={user} onLoggedOut={onLogout} style={{color: "white" }} />
+      <NavigationBar className="nav-bar" user={user} onLoggedOut={onLogout} />
+
+
       <Row className="justify-content-md-center">
         <Routes>
           <Route
@@ -79,7 +85,7 @@ export const MainView = () => {
                 {user ? (
                   <Navigate to="/" />
                 ) : (
-                  <Col md={5}>
+                  <Col md={4}>
                     <SignupView />
                   </Col>
                 )}
@@ -116,7 +122,7 @@ export const MainView = () => {
                 ) : movies.length === 0 ? (
                   <Col>The list is empty!</Col>
                 ) : (
-                  <Col md={8}>
+                  <Col md={7}>
                     <MovieView
                       movies={movies}
                       user={user}
@@ -132,6 +138,27 @@ export const MainView = () => {
             path="/"
             element={
               <>
+                <Row className="justify-content-md-center mb-3 search-bar">
+                  <Col md={3} >
+                    <input
+                      type="text"
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                      placeholder="Search for a movie..."
+                      className="form-control "
+                      style={{ 
+                        color: "white",
+                        maxWidth: "300px", 
+                        fontFamily: "'Quicksand', sans-serif", 
+                        backgroundColor: "rgba(0, 0, 0, 0)", 
+                        border: "1px solid rgba(255, 255, 255, 0.2)", 
+                        borderRadius: "20px",
+                        marginBottom: "20px",
+                    }}
+                    />
+                  </Col>
+                </Row>
+
                 {!user ? (
                   <Navigate to="/login" replace />
                 ) : isLoading ? (
@@ -140,11 +167,20 @@ export const MainView = () => {
                   <Col>The list is empty!</Col>
                 ) : (
                   <>
-                    {movies.map((movie) => (
-                      <Col className="mb-4" key={movie.id} md={3}>
-                        <MovieCard movie={movie} />
-                      </Col>
-                    ))}
+                    {movies
+                      .filter((movie) =>
+                        movie.title.toLowerCase().includes(searchTerm.toLowerCase())
+                      )
+                      .map((movie) => (
+                        <Col
+                          className="mb-4 main-movie-list"
+                          key={movie.id}
+                          style={{ fontFamily: "'Quicksand', sans-serif" }}
+                          md={3}
+                        >
+                          <MovieCard movie={movie} />
+                        </Col>
+                      ))}
                   </>
                 )}
               </>

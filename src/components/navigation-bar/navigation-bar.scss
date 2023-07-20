@@ -1,0 +1,12 @@
+$titlefont:'Oswald', sans-serif;
+$smallfont: 'Quicksand', sans-serif;
+
+
+.nav-bar {
+    margin: 10px 0 40px 0;
+    font-family: $titlefont;
+}
+
+
+
+@import "~bootstrap/scss/bootstrap.scss";

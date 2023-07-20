@@ -72,56 +72,60 @@ export const ProfileView = ({ user, movies, token, onLogout }) => {
 }
 
   return (
-    <div className="center-container">
+    <div className="center-container"  >
       <h2 className="userinfo-title">@{username}'s user info:</h2>
-      <Form onSubmit={handleUpdateUser}>
-        <Form.Group controlId="formUsername" style={{ width: "300px" }}>
+      <Form onSubmit={handleUpdateUser} >
+        <Form.Group controlId="formUsername" style={{ width: "300px", padding: "0 20px"}} >
           <Form.Label >Username</Form.Label>
           <Form.Control
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            style={{color: "white",  backgroundColor: "rgba(0, 0, 0, 0)", border: "1px solid rgba(255, 255, 255, 0.2)", borderRadius: "20px",  marginBottom: "10px"}}
             required
           />
         </Form.Group>
-        <Form.Group controlId="formPassword" style={{ width: "300px" }}>
+        <Form.Group controlId="formPassword" style={{ width: "300px", padding: "0 20px" }}>
           <Form.Label>Password</Form.Label>
           <Form.Control
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            style={{color: "white",  backgroundColor: "rgba(0, 0, 0, 0)", border: "1px solid rgba(255, 255, 255, 0.2)", borderRadius: "20px",  marginBottom: "10px" }}
             required
           />
         </Form.Group>
-        <Form.Group controlId="formEmail" style={{ width: "300px" }}>
+        <Form.Group controlId="formEmail" style={{ width: "300px", padding: "0 20px" }}>
           <Form.Label>Email</Form.Label>
           <Form.Control
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            style={{color: "white",  backgroundColor: "rgba(0, 0, 0, 0)", border: "1px solid rgba(255, 255, 255, 0.2)", borderRadius: "20px",  marginBottom: "10px" }}
             required
           />
         </Form.Group>
-        <Form.Group controlId="formDateOfBirth" style={{ width: "300px" }}>
+        <Form.Group controlId="formDateOfBirth" style={{ width: "300px", padding: "0 20px" }}>
           <Form.Label>Date of Birth</Form.Label>
           <Form.Control
             type="date"
             value={dateOfBirth}
             onChange={(e) => setDateOfBirth(e.target.value)}
+            style={{color: "white",  backgroundColor: "rgba(0, 0, 0, 0)", border: "1px solid rgba(255, 255, 255, 0.2)", borderRadius: "20px" }}
             required
           />
         </Form.Group>
-        <Button type="submit" s style={{color: "white",  backgroundColor: "rgba(0, 0, 0, 0)", border: "1px solid rgba(255, 255, 255, 0.2)", borderRadius: "20px" }}>Update</Button>
+        <Button type="submit"  className="update-button" style={{color: "white",  backgroundColor: "rgba(0, 0, 0, 0)", border: "1px solid rgba(255, 255, 255, 0.2)", borderRadius: "20px", marginLeft: "20px" }}>Update</Button>
       </Form>
       {successMessage && <p>{successMessage}</p>}
 
 
-      <Button variant="danger" onClick={handleDeleteUser}>
+      <Button variant="danger" className="delete-button" onClick={handleDeleteUser}>
         Delete Account
       </Button>
 
 
-      <h2 className="favorite-movies-title">@{username}'s fave movies:</h2>
+      <h2 className="favorite-movies-title">@{username}'s favorite movies:</h2>
       
       {favoriteMovies.length > 0 ? (
         <div className="movie-list" style={{ display: "flex", gap: "20px" }}>

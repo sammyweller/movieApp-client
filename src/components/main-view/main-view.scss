@@ -1,0 +1,16 @@
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    input {
+        color: white;
+        &::placeholder {
+            color: white;
+            opacity: 1;
+        }
+    }
+}
+
+
+@import "~bootstrap/scss/bootstrap.scss";
