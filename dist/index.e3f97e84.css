@@ -52864,6 +52864,10 @@ textarea.form-control-lg {
   opacity: 1;
 }
 
+.main-content {
+  margin-bottom: 80px;
+}
+
 :root, [data-bs-theme="light"] {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
