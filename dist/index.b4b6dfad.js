@@ -47970,7 +47970,7 @@ const NavigationBar = ({ user, onLoggedOut })=>{
                     "aria-controls": "basic-navbar-nav",
                     style: {
                         borderColor: "rgba(255, 255, 255, 0.2",
-                        fill: "white"
+                        backgroundColor: "rgba(255, 255, 255, 1"
                     }
                 }, void 0, false, {
                     fileName: "src/components/navigation-bar/navigation-bar.jsx",
