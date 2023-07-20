@@ -4,9 +4,9 @@ import "./navigation-bar.scss"
 
 export const NavigationBar = ({ user, onLoggedOut }) => {
   return (
-    <Navbar  className="nav-bar" expand="lg" style={{ border: "0px solid rgba(0, 0, 0, 0)", backgroundColor: "rgba(0, 0, 0, 0)"}}>
+    <Navbar  className="nav-bar" expand="lg" style={{ border: "0px solid rgba(0, 0, 0, 0)", backgroundColor: "rgba(0, 0, 0, 0)" }}>
       <Container>
-        <Navbar.Brand style={{ color: "white"}} as={Link} to="/">
+        <Navbar.Brand style={{ color: "white", fontSize: "28px"}} as={Link} to="/">
           Movies App
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ borderColor: "white" }} />

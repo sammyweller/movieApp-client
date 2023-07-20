@@ -47948,7 +47948,8 @@ const NavigationBar = ({ user, onLoggedOut })=>{
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Navbar).Brand, {
                     style: {
-                        color: "white"
+                        color: "white",
+                        fontSize: "28px"
                     },
                     as: (0, _reactRouterDom.Link),
                     to: "/",
