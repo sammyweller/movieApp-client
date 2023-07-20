@@ -6,8 +6,8 @@ $smallfont: 'Quicksand', sans-serif;
     margin: 10px 0 30px 0;
     font-family: $titlefont;
     .navbar-toggler-icon {
-        /* Change the color of the hamburger menu icon here */
         color: white;
+        border-radius: "20px";
       }
 }
 

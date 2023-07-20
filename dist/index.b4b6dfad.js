@@ -47969,7 +47969,8 @@ const NavigationBar = ({ user, onLoggedOut })=>{
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Navbar).Toggle, {
                     "aria-controls": "basic-navbar-nav",
                     style: {
-                        borderColor: "white"
+                        borderColor: "rgba(255, 255, 255, 0.2",
+                        fill: "white"
                     }
                 }, void 0, false, {
                     fileName: "src/components/navigation-bar/navigation-bar.jsx",

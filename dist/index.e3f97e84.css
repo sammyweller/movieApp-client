@@ -39659,6 +39659,7 @@ textarea.form-control-lg {
 
 .nav-bar .navbar-toggler-icon {
   color: #fff;
+  border-radius: "20px";
 }
 
 :root, [data-bs-theme="light"] {
