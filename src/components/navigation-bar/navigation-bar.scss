@@ -1,0 +1,14 @@
+$titlefont:'Oswald', sans-serif;
+$smallfont: 'Quicksand', sans-serif;
+
+
+.nav-bar {
+    margin: 10px 0 30px 0;
+    font-family: $titlefont;
+    .navbar-toggler-icon {
+        color: white;
+        border-radius: "20px";
+      }
+}
+
+@import "~bootstrap/scss/bootstrap.scss";

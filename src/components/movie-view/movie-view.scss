@@ -1,37 +1,49 @@
-
-$bgcolor: #170229;
-$primary: #a479db;
-$main-text: white;
-$custom-font: "Trebuchet MS", sans-serif;
-
-
+$smalltext: white;
+$titlefont:'Oswald', sans-serif;
+$smallfont: 'Quicksand', sans-serif;
 
 .movie-details {
-  max-width: 60%;
-  margin: 0 auto; /* Center horizontally */
+  max-width: 80%;
+  margin: 0 auto;
   padding: 20px;
+  color: $smalltext;
+  margin-top: 20px;
+  border-radius: 20px;
+  font-family: $smallfont;
+}
+
+.movieViewTitle {
+  font-family: $titlefont;
 }
 
 img {
 
-  width: 60%; /* Adjust the width to your desired size */
+  width: 55%;
   display: block;
-  margin: 0 auto; /* Center horizontally */
-  
+  margin: 0 auto;
+}
+
+
+.movie-view-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 200px;
+  font-family: $smallfont;
+}
+
+@media only all and (max-width: 700px) {
+
+  .movie-details {
+    font-size: 13px;
   }
-  
-  .movieViewTitle {
-    color: $main-text;
-    font-family: $custom-font;
-    font-size: 1.5em;
+
+  img {
+    width: 90%;
   }
 
-  .movieViewDescription, .movieViewGenre, .movieViewDirector {
-    color: $main-text;
-    font-weight: 200;
-  }
+}
 
-
-
-
-  @import "~bootstrap/scss/bootstrap.scss";
+@import "~bootstrap/scss/bootstrap.scss";

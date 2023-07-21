@@ -1,32 +1,34 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import "./navigation-bar.scss"
 
 export const NavigationBar = ({ user, onLoggedOut }) => {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar  className="nav-bar" expand="lg" style={{ border: "0px solid rgba(0, 0, 0, 0)", backgroundColor: "rgba(0, 0, 0, 0)" }}>
       <Container>
-        <Navbar.Brand as={Link} to="/">
+        <Navbar.Brand style={{ color: "white", fontSize: "28px"}} as={Link} to="/">
           Movies App
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ borderColor: "rgba(255, 255, 255, 0.2", backgroundColor: "rgba(255, 255, 255, 1"}} />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
           {!user && (
               <>
-                <Nav.Link as={Link} to="/login">
+                <Nav.Link style={{ color: "white"}} as={Link} to="/login">
                   Login
                 </Nav.Link>
-                <Nav.Link as={Link} to="/signup">
+                <Nav.Link style={{ color: "white"}} as={Link} to="/signup">
                   Signup
                 </Nav.Link>
               </>
             )}
             {user && (
               <>
-                <Nav.Link as={Link} to="/">
+                <Nav.Link style={{ color: "white"}} as={Link} to="/">
                   Home
                 </Nav.Link>
-                <Nav.Link onClick={onLoggedOut}>Logout</Nav.Link>
+                <Nav.Link style={{ color: "white"}} as={Link} to="/profile">Profile</Nav.Link>
+                <Nav.Link style={{ color: "white"}} onClick={onLoggedOut}>Logout</Nav.Link>
               </>
             )}
           </Nav>

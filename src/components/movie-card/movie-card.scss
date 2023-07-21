@@ -1,20 +1,28 @@
-$bgcolor: #170229;
-$primary: #a479db;
-$main-text: white;
-$custom-font: "Trebuchet MS", sans-serif;
+$smalltext: white;
+$titlefont:'Oswald', sans-serif;
+$smallfont: 'Quicksand', sans-serif;
 
-
-
-.movieTitle {
-    color: $main-text;
-    font-family: $custom-font;
-    font-size: 1.5em;
-}
 
 .director {
-    color: $main-text;
-    font-weight: 200;
+color: $smalltext;
+font-family: $smallfont;
 }
+
+.movie-title {
+  font-family: $titlefont;
+}
+
+
+@media only all and (max-width: 1020px) {
+
+  .movie-card {
+    font-size: 13px;
+  }
+
+}
+
+
+
 
 
   @import "~bootstrap/scss/bootstrap.scss";
