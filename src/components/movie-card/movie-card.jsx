@@ -11,7 +11,7 @@ export const MovieCard = ({ movie }) => {
 
   return (
     <Card className="h-100 movie-card" style={{ border: "0px solid rgba(0, 0, 0, 0)", backgroundColor: "rgba(255, 255, 255, 0.1)"}}>
-      <Card.Img variant="top" src={movie.imagePath} />
+      <Card.Img className ="card-img" variant="top" src={movie.imagePath} />
       <Card.Body className="card-body">
         <Card.Title 
         className="movie-title" 

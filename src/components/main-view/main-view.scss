@@ -16,4 +16,21 @@
     margin-bottom: 80px; 
   }
 
+
+  @media only all and (max-width: 1020px) {
+
+    .movie-card {
+      font-size: 20px;
+    }
+
+    .card-img {
+        max-width: 250px;
+    }
+  
+  }
+  
+  
+  
+
+
 @import "~bootstrap/scss/bootstrap.scss";
