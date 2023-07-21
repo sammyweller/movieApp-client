@@ -17,10 +17,10 @@
   }
 
 
-  @media only all and (max-width: 1020px) {
+  @media only all and (max-width: 700px) {
 
-    .movie-card {
-      font-size: 20px;
+    .movie-card, .director, .movie-title {
+      font-size: 22px;
     }
 
     .card-img {
@@ -28,7 +28,6 @@
     }
   
   }
-  
   
   
 
