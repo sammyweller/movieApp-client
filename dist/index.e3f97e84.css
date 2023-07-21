@@ -26428,40 +26428,14 @@ textarea.form-control-lg {
   }
 }
 
-.center-container {
+.nav-bar {
+  margin: 10px 0 30px;
+  font-family: Oswald, sans-serif;
+}
+
+.nav-bar .navbar-toggler-icon {
   color: #fff;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  font-family: Quicksand, sans-serif;
-  display: flex;
-}
-
-.update-button {
-  margin: 20px 0;
-}
-
-.delete-button {
-  margin-top: 10px;
-}
-
-.movie-list {
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 80px;
-  font-family: Quicksand, sans-serif;
-  display: flex;
-}
-
-.userinfo-title {
-  margin-bottom: 40px;
-  font-family: Oswald, sans-serif;
-}
-
-.favorite-movies-title {
-  margin: 60px 0 40px;
-  font-family: Oswald, sans-serif;
+  border-radius: "20px";
 }
 
 :root, [data-bs-theme="light"] {
@@ -39652,14 +39626,40 @@ textarea.form-control-lg {
   }
 }
 
-.nav-bar {
-  margin: 10px 0 30px;
+.center-container {
+  color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-family: Quicksand, sans-serif;
+  display: flex;
+}
+
+.update-button {
+  margin: 20px 0;
+}
+
+.delete-button {
+  margin-top: 10px;
+}
+
+.movie-list {
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 80px;
+  font-family: Quicksand, sans-serif;
+  display: flex;
+}
+
+.userinfo-title {
+  margin-bottom: 40px;
   font-family: Oswald, sans-serif;
 }
 
-.nav-bar .navbar-toggler-icon {
-  color: #fff;
-  border-radius: "20px";
+.favorite-movies-title {
+  margin: 60px 0 40px;
+  font-family: Oswald, sans-serif;
 }
 
 :root, [data-bs-theme="light"] {
