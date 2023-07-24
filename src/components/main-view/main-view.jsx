@@ -177,7 +177,12 @@ export const MainView = () => {
                             style={{ fontFamily: "'Quicksand', sans-serif" }}
                             md={3}
                           >
-                            <MovieCard movie={movie} />
+                                            <MovieCard
+                              movie={movie}
+                              user={user}
+                              token={token}
+                              setUser={setUser}
+                            />
                           </Col>
                         ))}
                     </>

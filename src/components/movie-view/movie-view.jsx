@@ -73,15 +73,15 @@ export const MovieView = ({ movies, user, token, setUser }) => {
           <span>{movie.title}</span>
         </div>
         <div className="movieViewDescription" style={{ marginBottom: "10px" }}>
-          <span>Description: </span>
+          <strong>Description: </strong>
           <span>{movie.description}</span>
         </div>
         <div className="movieViewGenre">
-          <span>Genre: </span>
+          <strong>Genre: </strong>
           <span>{movie.genre.name}</span>
         </div>
         <div className="movieViewDirector">
-          <span>Director: </span>
+          <strong>Director: </strong>
           <span>{movie.director.name}</span>
         </div>
       </div>

@@ -18,9 +18,14 @@ export const ProfileView = ({ user, movies, token, onLogout }) => {
 
   useEffect(() => {
     if (user) {
+      console.log("User date of birth:", user.dateOfBirth);
+
       setUsername(user.username);
       setEmail(user.email);
       setDateOfBirth(user.dateOfBirth);
+
+      console.log("Date of birth state:", dateOfBirth);
+
     }
   }, [user]);
 
