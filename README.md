@@ -13,5 +13,14 @@ Using React, build the client-side for an app called myFlix based on its existin
 * Parcel
 * Application uses state routing to navigate between views and share URLs
 
+## Images of app: 
 
-!(https://cdn.dribbble.com/userupload/8803092/file/original-1be0c4da6074ed4bbaeff3a9215a6f77.png?resize=1369x904)
+![top of app](./src/img/movieapp1.png)
+
+### Full main view:
+
+![full view of main view](./src/img/movieapp2.png)
+
+### Full profile view:
+
+![full view of profile](./src/img/movieapp3.png)
